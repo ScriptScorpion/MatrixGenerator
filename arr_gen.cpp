@@ -25,15 +25,15 @@ int main() {
     }
 
     int arr[rows][columns] {};
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < columns; ++j) {
-            arr[i][j] = j + 1;
+    for (int i = 0; i < columns; ++i) {
+        for (int j = 0; j < rows; ++j) {
+            arr[j][i] = j + 1;
         }
     }
-    for (int y = 0; y < rows; ++y) {
+    for (int y = 0; y < columns; ++y) {
         newline(first_loop);
-        for (int p = 0; p < columns; ++p) {
-            std::cout << arr[y][p] << " ";
+        for (int p = 0; p < rows; ++p) {
+            std::cout << arr[p][y] << " ";
         }
     }
     std::cout << std::endl;
